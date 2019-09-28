@@ -1,6 +1,7 @@
 package com.example.ssm.domain;
 
 import com.example.ssm.utils.DateUtils;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -50,7 +51,7 @@ public class Product {
     public void setCityName(String cityName) {
         this.cityName = cityName;
     }
-
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     public Date getDepartureTime() {
         return departureTime;
     }
