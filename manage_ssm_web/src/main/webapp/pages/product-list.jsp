@@ -12,9 +12,9 @@
 
 
 
-<title>数据</title>
-<meta name="description" content="AdminLTE2定制版">
-<meta name="keywords" content="AdminLTE2定制版">
+<title>产品页面</title>
+<meta name="description" content="产品页面">
+<meta name="keywords" content="产品页面">
 
 
 
@@ -363,7 +363,7 @@
 				<b>Version</b> 1.0.8
 			</div>
 			<strong>Copyright &copy; 2014-2017 <a
-				href="http://www.itcast.cn">研究院研发部</a>.
+				href="#">LC的个人小站</a>.
 			</strong> All rights reserved.
 		</footer>
 		<!-- 底部导航 /-->

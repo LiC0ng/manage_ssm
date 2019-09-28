@@ -7,9 +7,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>ITCAST - AdminLTE2定制版</title>
-<meta name="description" content="AdminLTE2定制版">
-<meta name="keywords" content="AdminLTE2定制版">
+<title>后台管理首页</title>
+<meta name="description" content="后台管理首页">
+<meta name="keywords" content="后台管理首页">
 
 <!-- Tell the browser to be responsive to screen width -->
 <meta
