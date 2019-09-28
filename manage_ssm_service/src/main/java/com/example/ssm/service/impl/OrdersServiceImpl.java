@@ -20,4 +20,9 @@ public class OrdersServiceImpl implements IOrdersService {
     public List<Orders> findAll() throws Exception {
         return ordersDao.findAll();
     }
+
+    @Override
+    public Orders findById(String ordersId) throws Exception {
+        return ordersDao.findById(ordersId);
+    }
 }

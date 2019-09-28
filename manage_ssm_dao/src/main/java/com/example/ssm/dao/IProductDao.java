@@ -19,7 +19,7 @@ public interface IProductDao {
      * 保存产品信息
      * @param product 要保存的产品实体类
      */
-    @Insert("insert into product(productNum, productName, cityName, departureTime, productPrice, productDesc, productStatus)" +
+    @Insert("insert into product(productNum, productName, cityName, departureTime, productPrice, productDesc, productStatus) " +
             "values(#{productNum}, #{productName}, #{cityName}, #{departureTime}, #{productPrice}, #{productDesc}, #{productStatus})")
     void save(Product product);
 

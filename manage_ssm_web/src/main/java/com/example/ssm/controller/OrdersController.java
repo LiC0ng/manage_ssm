@@ -30,4 +30,19 @@ public class OrdersController {
         mv.addObject("ordersList", ordersList);
         return mv;
     }
+
+    /**
+     * 查询订单详情
+     * @param ordersId 订单id
+     * @return 返回订单详情
+     * @throws Exception 抛出异常
+     */
+    @RequestMapping("/findById.do")
+    public ModelAndView findById(@RequestParam(name = "id", required = true) String ordersId) throws Exception {
+        ModelAndView mv = new ModelAndView();
+        Orders orders = ordersService.findById(ordersId);
+        mv.addObject("orders", orders);
+        mv.setViewName("orders-show");
+        return mv;
+    }
 }
