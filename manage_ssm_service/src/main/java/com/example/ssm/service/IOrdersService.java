@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IOrdersService {
 
-    List<Orders> findAll() throws Exception;
+    List<Orders> findAll(int size, int page) throws Exception;
 
     Orders findById(String ordersId) throws Exception;
 }

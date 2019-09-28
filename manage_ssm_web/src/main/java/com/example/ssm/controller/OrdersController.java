@@ -2,6 +2,7 @@ package com.example.ssm.controller;
 
 import com.example.ssm.domain.Orders;
 import com.example.ssm.service.IOrdersService;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,11 +18,14 @@ public class OrdersController {
     @Autowired
     private IOrdersService ordersService;
 
+    /*    */
+
     /**
      * 查询所有订单信息(未分页)
+     *
      * @return 返回指定页面的订单信息
      * @throws Exception 抛出异常
-     */
+     *//*
     @RequestMapping("/findAll.do")
     public ModelAndView findAll() throws Exception {
         List<Orders> ordersList = ordersService.findAll();
@@ -29,10 +33,22 @@ public class OrdersController {
         mv.setViewName("orders-list");
         mv.addObject("ordersList", ordersList);
         return mv;
+    }*/
+    @RequestMapping("/findAll.do")
+    public ModelAndView findAll(@RequestParam(name = "page", required = true, defaultValue = "1") int page,
+                                @RequestParam(name = "size", required = true, defaultValue = "5") int size) throws Exception {
+        ModelAndView mv = new ModelAndView();
+        List<Orders> ordersList = ordersService.findAll(page, size);
+        PageInfo pageInfo = new PageInfo(ordersList);
+        mv.addObject("pageInfo", pageInfo);
+        mv.setViewName("orders-page-list");
+        return mv;
     }
+
 
     /**
      * 查询订单详情
+     *
      * @param ordersId 订单id
      * @return 返回订单详情
      * @throws Exception 抛出异常

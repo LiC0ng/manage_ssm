@@ -3,6 +3,7 @@ package com.example.ssm.service.impl;
 import com.example.ssm.dao.IOrdersDao;
 import com.example.ssm.domain.Orders;
 import com.example.ssm.service.IOrdersService;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +18,9 @@ public class OrdersServiceImpl implements IOrdersService {
     private IOrdersDao ordersDao;
 
     @Override
-    public List<Orders> findAll() throws Exception {
+    public List<Orders> findAll(int page, int size) throws Exception {
+        //参数pageNum是页码值， pageSize是每页显示的条数
+        PageHelper.startPage(page, size);
         return ordersDao.findAll();
     }
 
