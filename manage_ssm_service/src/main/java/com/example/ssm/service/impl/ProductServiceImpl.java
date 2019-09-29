@@ -13,7 +13,7 @@ import java.util.List;
 @Transactional
 public class ProductServiceImpl implements IProductService {
 
-    @Autowired(required = false)
+    @Autowired
     private IProductDao productDao;
 
     @Override

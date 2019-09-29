@@ -14,7 +14,7 @@ import java.util.List;
 @Transactional
 public class OrdersServiceImpl implements IOrdersService {
 
-    @Autowired(required = false)
+    @Autowired
     private IOrdersDao ordersDao;
 
     @Override
