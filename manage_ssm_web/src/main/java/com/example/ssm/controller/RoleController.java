@@ -24,4 +24,10 @@ public class RoleController {
         mv.setViewName("role-list");
         return mv;
     }
+
+    @RequestMapping("/save.do")
+    public String save(Role role) throws Exception {
+        roleService.save(role);
+        return "redirect:findAll.do";
+    }
 }
