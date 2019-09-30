@@ -24,4 +24,10 @@ public class UserController {
         mv.setViewName("user-list");
         return mv;
     }
+
+    @RequestMapping("/save.do")
+    public String save(UserInfo userInfo) throws Exception {
+        userService.save(userInfo);
+        return "redirect:findAll.do";
+    }
 }
