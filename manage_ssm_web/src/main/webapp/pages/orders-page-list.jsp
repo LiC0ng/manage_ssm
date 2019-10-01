@@ -10,9 +10,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
-        <title>订单页面</title>
-        <meta name="description" content="订单页面">
-        <meta name="keywords" content="订单页面">
+        <title>订单管理</title>
+        <meta name="description" content="订单管理">
+        <meta name="keywords" content="订单管理">
 
 
         <!-- Tell the browser to be responsive to screen width -->
@@ -157,12 +157,12 @@
                 <section class="content-header">
                     <h1>
                         数据管理
-                        <small>数据列表</small>
+                        <small>订单管理</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
                         <li><a href="#">数据管理</a></li>
-                        <li class="active">数据列表</li>
+                        <li class="active">订单管理</li>
                     </ol>
                 </section>
                 <!-- 内容头部 /-->
@@ -185,30 +185,11 @@
                                 <div class="pull-left">
                                     <div class="form-group form-inline">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-default" title="新建"
-                                                    onclick="location.href='${pageContext.request.contextPath}/pages/product-add.jsp'">
-                                                <i class="fa fa-file-o"></i> 新建
-                                            </button>
-                                            <button type="button" class="btn btn-default" title="删除">
-                                                <i class="fa fa-trash-o"></i> 删除
-                                            </button>
-                                            <button type="button" class="btn btn-default" title="开启">
-                                                <i class="fa fa-check"></i> 开启
-                                            </button>
-                                            <button type="button" class="btn btn-default" title="屏蔽">
-                                                <i class="fa fa-ban"></i> 屏蔽
-                                            </button>
-                                            <button type="button" class="btn btn-default" title="刷新">
+                                            <button type="button" class="btn btn-default" title="刷新"
+                                                    onclick="location.href='${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pageNum}&size=${pageInfo.pageSize}'">
                                                 <i class="fa fa-refresh"></i> 刷新
                                             </button>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="box-tools pull-right">
-                                    <div class="has-feedback">
-                                        <input type="text" class="form-control input-sm"
-                                               placeholder="搜索"> <span
-                                            class="glyphicon glyphicon-search form-control-feedback"></span>
                                     </div>
                                 </div>
                                 <!--工具栏/-->
@@ -244,7 +225,6 @@
                                             <td>${orders.orderTimeStr }</td>
                                             <td class="text-center">${orders.orderStatusStr }</td>
                                             <td class="text-center">
-                                                <button type="button" class="btn bg-olive btn-xs">订单</button>
                                                 <button type="button" class="btn bg-olive btn-xs"
                                                         onclick="location.href='${pageContext.request.contextPath}/orders/findById.do?id=${orders.id}'">
                                                     详情
@@ -267,36 +247,6 @@
                                 </table>
                                 <!--数据列表/-->
 
-                                <!--工具栏-->
-                                <div class="pull-left">
-                                    <div class="form-group form-inline">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-default" title="新建">
-                                                <i class="fa fa-file-o"></i> 新建
-                                            </button>
-                                            <button type="button" class="btn btn-default" title="删除">
-                                                <i class="fa fa-trash-o"></i> 删除
-                                            </button>
-                                            <button type="button" class="btn btn-default" title="开启">
-                                                <i class="fa fa-check"></i> 开启
-                                            </button>
-                                            <button type="button" class="btn btn-default" title="屏蔽">
-                                                <i class="fa fa-ban"></i> 屏蔽
-                                            </button>
-                                            <button type="button" class="btn btn-default" title="刷新">
-                                                <i class="fa fa-refresh"></i> 刷新
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="box-tools pull-right">
-                                    <div class="has-feedback">
-                                        <input type="text" class="form-control input-sm"
-                                               placeholder="搜索"> <span
-                                            class="glyphicon glyphicon-search form-control-feedback"></span>
-                                    </div>
-                                </div>
-                                <!--工具栏/-->
 
                             </div>
                             <!-- 数据表格 /-->
