@@ -150,7 +150,8 @@
                                                 <td>${role.roleDesc }</td>
                                             </tr>
                                             <c:forEach items="${role.permissions}" var="permission" varStatus="vsChild">
-                                                <tr data-tt-id="${vs.index + 1}-${vsChild.index + 1}" data-tt-parent-id="${vs.index + 1}">
+                                                <tr data-tt-id="${vs.index + 1}-${vsChild.index + 1}"
+                                                    data-tt-parent-id="${vs.index + 1}">
                                                     <td>${permission.permissionName}</td>
                                                     <td>${permission.url}</td>
                                                 </tr>
@@ -209,14 +210,7 @@
             <!-- 内容区域 /-->
 
             <!-- 底部导航 -->
-            <footer class="main-footer">
-                <div class="pull-right hidden-xs">
-                    <b>Version</b> 1.0.8
-                </div>
-                <strong>Copyright &copy; 2014-2017 <a
-                        href="#">LICONG个人小站</a>.
-                </strong> All rights reserved.
-            </footer>
+            <jsp:include page="footer.jsp"/>
             <!-- 底部导航 /-->
 
         </div>
